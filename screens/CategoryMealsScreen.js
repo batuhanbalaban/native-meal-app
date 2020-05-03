@@ -14,7 +14,7 @@ const CategoryMealsScreen = props => {
                 onSelect={() => {
                     props.navigation.navigate({
                         routeName: 'MealDetail',
-                        params: { category: itemData.item }
+                        params: { meal: itemData.item }
                     });
                 }}
             />
@@ -37,7 +37,7 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
     const category = navigationData.navigation.getParam('category');
     return {
         headerTitle: category.title,
-    }
+    };
 };
 
 
