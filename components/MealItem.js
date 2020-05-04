@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Platform, TouchableNativeFeedback, ImageBackground } from 'react-native';
-
+import TextDefault from './TextDefault';
 const MealItem = props => {
     let TouchableCmp = TouchableOpacity;
     if (Platform.OS === 'android' && Platform.Version >= 21) {
@@ -26,9 +26,9 @@ const MealItem = props => {
 
                 </View>
                 <View style={{ ...styles.mealRow, ...styles.mealDetail }} >
-                    <Text >{props.item.duration}m</Text>
-                    <Text >{props.item.complexity.toUpperCase()}</Text>
-                    <Text >{props.item.affordability.toUpperCase()}</Text>
+                    <TextDefault >{props.item.duration}m</TextDefault>
+                    <TextDefault >{props.item.complexity.toUpperCase()}</TextDefault>
+                    <TextDefault >{props.item.affordability.toUpperCase()}</TextDefault>
                 </View>
             </TouchableCmp>
         </View>
